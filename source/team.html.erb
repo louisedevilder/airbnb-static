@@ -1,0 +1,25 @@
+<h1 class="text-center">Team</h1>
+
+<div class="container text-center">
+  <div class="row">
+    <% data.team.each do |member| %>
+      <div class="col-md-4 col-sm-6">
+        <img class="avatar-bordered" src="<%= member[:picture_url] %>" alt="<%= "#{member[:name]} - #{member[:position]}" %>">
+        <h3><%= member[:name] %></h3>
+         <p>
+          <%= member[:position] %>
+         </p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container text-center">
+  <div class="contact-link">
+    <div class="class row">
+      <div class="class col-xs-12">
+        <a class="fa fa-envelope" aria-hidden="true" href="mailto:contact@lewagon.com"> contact@lewagon.com</a>
+      </div>
+    </div>
+  </div>
+</div>
